@@ -222,19 +222,20 @@
                <option value="other">Other</option>
             
             <!--password-->
-            <label></label>
+            <label for="password">Password:</label>
+               <input type="password" id="password" name="password" required>
+               <button type="button" id="password-toggle" onclick="togglePasswordVisibility('password)">Show</button>
+               <br><br>
                
-            
-            
-            
-            
-            
-            
-
-
-            <button type="submit">Sign In</button><br><br>
-
-            <p>Don't have an account? <a href="create-account.html">Create an Account</a></p>
+               <!-- confirm password-->
+            <label for="confirm-password">Confirm Password:</label>
+               <input type="password" id="confirm-password" name="confirm-password" required>
+               <button type="button" id="confirm-password-toggle" onclick="togglePasswordVisibility('confirm-password)">Show</button>
+               <br><br>
+               
+                <!-- submit-->
+               <p>By clicking continue, i agree to Terms of use and acknowlege that i have read the privacy policy.</p><br><br>
+               <button type="submit">Submit</button>
         </form>
     </section>
     <!-- Sign-in form ends here -->
