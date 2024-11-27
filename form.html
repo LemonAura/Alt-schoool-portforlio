@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,48 +22,45 @@
         <h2>Already an AltSchooler? Sign In!</h2>
         <h3>Signup</h3>
         <form action="#" method="POST">
-            <!-- First Name-->
+            <!-- First Name -->
             <label for="first-name">First Name:</label>
             <input type="text" id="first-name" name="first-name" placeholder="Enter first name" required><br><br>
 
-            <!-- Last Name-->
+            <!-- Last Name -->
             <label for="last-name">Last Name:</label>
             <input type="text" id="last-name" name="last-name" placeholder="Enter last name" required><br><br>
 
-            <!-- Gender-->
+            <!-- Gender -->
             <label for="gender">Gender:</label>
-            <select id="gender" name="gender" placeholder="select gender" required>
+            <select id="gender" name="gender" required>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
             </select><br><br>
 
-            <!-- Date of birth-->
+            <!-- Date of Birth -->
             <label for="dob">Date of Birth:</label>
             <input type="text" id="dob" name="dob" placeholder="YYYY-MM-DD" required><br><br>
 
-            <!-- Email Address-->
+            <!-- Email Address -->
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" placeholder="Enter email address" required><br><br>
 
- <!-- Email Address-->
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" placeholder="Enter email address" required><br><br>
-
-            <!-- phone number-->
+            <!-- Phone Number -->
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" placeholder="08154387000" required pattern="[0-9]{10}"><br><br>
 
-            <!-- Country-->
+            <!-- Country -->
             <label for="country">Country:</label>
-            <select id="country" name="country" placeholder="Select your country" required>
-               <option value="afghanistan">Afghanistan</option>
-               <option value="albania">Albania</option>
-               <option value="algeria">Algeria</option>
-               <option value="andorra">Andorra</option>
-               <option value="angola">Angola</option>
-               <option value="antigua-and-barbuda">Antigua and Barbuda</option>
-               <option value="argentina">Argentina</option>
-               <option value="armenia">Armenia</option>
+            <select id="country" name="country" required>
+                <!-- List of countries -->
+                <option value="afghanistan">Afghanistan</option>
+                <option value="albania">Albania</option>
+                <option value="algeria">Algeria</option>
+                <option value="andorra">Andorra</option>
+                <option value="angola">Angola</option>
+                <option value="antigua-and-barbuda">Antigua and Barbuda</option>
+                <option value="argentina">Argentina</option>
+                <option value="armenia">Armenia</option>
                <option value="australia">Australia</option>
                <option value="austria">Austria</option>
                <option value="azerbaijan">Azerbaijan</option>
@@ -201,42 +198,44 @@
                <option value="rwanda">Rwanda</option>
                <option value="saint-kitts-and-nevis">Saint Kitts and Nevis</option>
                <option value="saint-lucia">Saint Lucia</option>
-               <option value="saint-vincent-and-the-grenadines">Saint Vincent
-               </select><br><br>
+               <option value="saint-vincent-and-the-grenadines">Saint Vincent</option>
+                <!-- countries from A-Z-->
+            </select><br><br>
 
-            <!-- State/City of residence-->
+            <!-- State/City of Residence -->
             <label for="state">State/City of Residence:</label>
             <input type="text" id="state" name="state" placeholder="Enter your state of residence" required><br><br>
 
             <!-- How did you hear about us -->
             <label for="source">How did you hear about us:</label>
-           <select id="source"  name="source" required>
-               <option value="" disabled selected>Select channel</option>
-               <option value="facebook">Facebook</option>
-               <option value="linkedin"Linkedin</option>
-               <option value="youtube">Youtube</option>
-               <option value="riend">Friend</option> 
-               <option value="whatsapp">Whatsapp</option>
-               <option value="instagram">Instagram</option>
-               <option value="billboard">Billboard</option>
-               <option value="sales officer">Sales officer</option>
-               <option value="other">Other</option>
-            
-            <!--password-->
+            <select id="source" name="source" required>
+                <option value="" disabled selected>Select channel</option>
+                <option value="facebook">Facebook</option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="youtube">YouTube</option>
+                <option value="friend">Friend</option>
+                <option value="whatsapp">WhatsApp</option>
+                <option value="instagram">Instagram</option>
+                <option value="billboard">Billboard</option>
+                <option value="sales officer">Sales officer</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <!-- Password -->
             <label for="password">Password:</label>
-               <input type="password" id="password" name="password" required>
-               <button type="button" id="password-toggle" onclick="togglePasswordVisibility('password)">Show</button>
-               <br><br>
-               
-               <!-- confirm password-->
+            <input type="password" id="password" name="password" required>
+            <button type="button" id="password-toggle" onclick="togglePasswordVisibility('password')">Show</button>
+            <br><br>
+
+            <!-- Confirm Password -->
             <label for="confirm-password">Confirm Password:</label>
-               <input type="password" id="confirm-password" name="confirm-password" required>
-               <button type="button" id="confirm-password-toggle" onclick="togglePasswordVisibility('confirm-password)">Show</button>
-               <br><br>
-               
-                <!-- submit-->
-               <p>By clicking continue, i agree to Terms of use and acknowlege that i have read the privacy policy.</p><br><br>
-               <button type="submit">Submit</button>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <button type="button" id="confirm-password-toggle" onclick="togglePasswordVisibility('confirm-password')">Show</button>
+            <br><br>
+
+            <!-- Submit -->
+            <p>By clicking continue, I agree to the Terms of Use and acknowledge that I have read the Privacy Policy.</p><br>
+            <button type="submit">Submit</button>
         </form>
     </section>
     <!-- Sign-in form ends here -->
@@ -250,6 +249,17 @@
         <a href="#top">Back to Top</a>
     </footer>
 
-    <a id="top"></a>
+    <script>
+        // Toggle password visibility
+        function togglePasswordVisibility(id) {
+            const field = document.getElementById(id);
+            if (field.type === "password") {
+                field.type = "text";
+            } else {
+                field.type = "password";
+            }
+        }
+    </script>
 </body>
 </html>
+
